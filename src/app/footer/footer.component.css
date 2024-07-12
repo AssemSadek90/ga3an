@@ -1,0 +1,5 @@
+@media (min-width: 768px) {
+  .locations {
+    border-bottom: solid 2px #a3a3a3 !important;
+  }
+}
