@@ -1,1 +1,28 @@
-<p>item-card works!</p>
+<article>
+  <div
+    class="card_background mx-auto h-72 border border-neutral-300 rounded-xl flex flex-col justify-end hover:scale-105 transition-transform duration-300 ease-in-out delay-50 hover:shadow-xl"
+    style="background-image: url('{{ menuItem.image }}');"
+  >
+    <div
+      class="card_details p-2 text-white bg-slate-800 bg-opacity-60 hover:bg-opacity-90 hover:transition ease-in-out delay-50"
+    >
+      <div class="flex justify-between">
+        <p class="text-2xl">{{ menuItem.name }}</p>
+        <p class="text-lg">${{ menuItem.price }}</p>
+      </div>
+      <p class="text-sm">{{ menuItem.calories }} kcal</p>
+      <div class="flex items-center w-full">
+        <p class="text-sm grow">{{ menuItem.description }}</p>
+        <button
+          class="bg-neutral-100 border rounded-full border-neutral-300 w-8 h-8 text-center hover:bg-neutral-300"
+        >
+          <img
+            class="object-contain p-1"
+            src="assets/addToCart.svg"
+            alt="cart"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</article>

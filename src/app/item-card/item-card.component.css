@@ -1,0 +1,5 @@
+.card_background {
+  overflow: clip;
+  background-size: cover;
+  background-position: 50%;
+}

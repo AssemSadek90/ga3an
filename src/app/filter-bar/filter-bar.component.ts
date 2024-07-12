@@ -9,5 +9,5 @@ import { CommonModule } from '@angular/common';
   styleUrl: './filter-bar.component.css'
 })
 export class FilterBarComponent {
-  public items : string[] = ["Food", "Drink", "Meals"]
+  public items : string[] = ["All","Food", "Drink", "Meals"]
 }
