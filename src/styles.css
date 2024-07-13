@@ -2,3 +2,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.clickableIcon {
+  @apply hover:scale-125 transition-transform duration-200 ease-in-out;
+}
+@font-face {
+  font-family: "Astaghfirulloh";
+  src: url("C:/Users/clear/Desktop/Dev/Angular Course/ga3an/public/assets/fonts/AstaghfirullohDemoRegular.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}

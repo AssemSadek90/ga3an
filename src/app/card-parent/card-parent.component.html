@@ -1,16 +1,5 @@
 <section
   class="mx-auto w-[70%] flex flex-col gap-y-2 md:grid md:gap-2 md:grid-cols-2 lg:grid lg:p-2 lg:gap-4 lg:grid-cols-3 lg:p-4"
 >
-  <item-card
-    *ngFor="let food of foods; let i = index"
-    [menuItem]="food"
-  ></item-card>
-  <item-card
-    *ngFor="let drink of drinks; let i = index"
-    [menuItem]="drink"
-  ></item-card>
-  <item-card
-    *ngFor="let meal of meals; let i = index"
-    [menuItem]="meal"
-  ></item-card>
+  <item-card *ngFor="let item of menuItems" [menuItem]="item"></item-card>
 </section>

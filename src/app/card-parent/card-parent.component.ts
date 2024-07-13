@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ItemCardComponent } from '../item-card/item-card.component';
 import { Meal, Food, Drink } from '../../shared/models/MenuItem/MenuItem';
 import { CommonModule } from '@angular/common';
@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './card-parent.component.css'
 })
 export class CardParentComponent {
+  @Input() filterNum : number = 0;
   public foods : Food[] = [
     new Food('Burger', 5.99, 550, 'https://assets.epicurious.com/photos/5c745a108918ee7ab68daf79/1:1/w_2560%2Cc_limit/Smashburger-recipe-120219.jpg', 'Juicy beef burger with lettuce and tomato'),
     new Food('Pizza', 8.99, 700, 'https://myfoodbook.com.au/sites/default/files/styles/card_c_xw_wp/public/recipe_photo/Cheesy%20Herb%20Garlic%20Pizza.jpg', 'Cheese pizza with a crispy crust'),
@@ -69,4 +70,15 @@ export class CardParentComponent {
       [this.foods[4], this.drinks[3]]
     )
   ];
+
+  get menuItems(){
+    if (this.filterNum === 1)
+      return this.foods
+    else if (this.filterNum === 2)
+      return this.drinks
+    else if (this.filterNum === 3)
+      return this.meals
+    else
+    return[...this.foods, ...this.drinks, ...this.meals]
+  }
 }

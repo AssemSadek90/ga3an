@@ -1,15 +1,17 @@
-<section>
+<section class="sticky top-0 z-10">
   <nav-bar></nav-bar>
 </section>
-<section>
+<section class="bg-[#ecd3b5]">
   <banner></banner>
 </section>
-<section>
-  <filter-bar></filter-bar>
+<filter-bar
+  class="sticky top-28 z-10"
+  (filterChange)="onChangeFilter($event)"
+  [filterNumberBar]="selectedFilter"
+></filter-bar>
+<section class="bg-[#ecd3b5]">
+  <card-parent [filterNum]="selectedFilter"></card-parent>
 </section>
-<section>
-  <card-parent></card-parent>
-</section>
-<section>
+<section class="bg-[#ecd3b5]">
   <footer-comp></footer-comp>
 </section>

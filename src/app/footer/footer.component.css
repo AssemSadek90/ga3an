@@ -1,5 +1,11 @@
 @media (min-width: 768px) {
   .locations {
-    border-bottom: solid 2px #a3a3a3 !important;
+    border-bottom: solid 2px #edd6b4 !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .locations {
+    border-bottom: solid 0px #edd6b4 !important;
   }
 }

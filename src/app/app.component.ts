@@ -16,5 +16,9 @@ import { FooterComponent } from './footer/footer.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  
+  selectedFilter : number = 0;
+  onChangeFilter = (filter: number) =>{
+    this.selectedFilter = filter
+    console.log(this.selectedFilter)
+  }
 }

@@ -1,5 +1,17 @@
 <section
-  class="bg-neutral-200 border rounded-full mx-auto my-4 w-fit h-12 flex justify-center items-center"
+  class="bg-[#263A41] rounded-full mx-auto my-4 w-fit h-12 flex justify-center items-center"
 >
-  <div *ngFor="let item of items" class="px-4">{{ item }}</div>
+  <div *ngFor="let item of items; index as i" class="px-2">
+    <button
+      class="rounded-3xl hover:bg-[#1D2F33]"
+      [ngClass]="{
+        'underline underline-offset-[6px] decoration-2 decoration-[#F5D872] bg-[#1D2F33] text-[#F5D872]':
+          filterNumberBar === i,
+        'bg-transparent text-neutral-200': filterNumberBar !== i
+      }"
+      (click)="applyFilter(i)"
+    >
+      <p class="px-4">{{ item }}</p>
+    </button>
+  </div>
 </section>
